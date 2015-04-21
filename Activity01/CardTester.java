@@ -23,8 +23,19 @@ public class CardTester
      */
     public CardTester()
     {
+        Card1 = new Card("King","Heart",13);
+        Card2 = new Card("King","Heart",13);
+        Card3 = new Card("Queen","Club",12);
+    }
+    /**
+     * Tester for Card Suit
+     */
+    public CardTestSuit()
+    {
+        System.out.println(Card1.suit());
         
     }
+
     /**
      * Sets up the test fixture.
      *
@@ -44,53 +55,4 @@ public class CardTester
     public void tearDown()
     {
     }
-    /**
-     * Tester for Card Suit
-     */
-    @Test
-    public void CardTestSuit()
-    {
-        Card Card1 = new Card("King","Heart",13);
-        assertEquals("Heart", Card1.suit());
-        
-    }
-    /**
-     * Tester for Card Rank
-     */
-    @Test
-    public void CardTestRank()
-    {
-        Card Card3 = new Card("Queen","Club",12);
-        assertEquals("Queen", Card3.rank());
-    }
-    /**
-     * Tester for Card Point Value
-     */
-    @Test
-    public void CardTestPoint()
-    {
-        Card Card1 = new Card("King","Heart",13);
-        assertEquals(13,Card1.pointValue(), .01);
-    }
-    /**
-     * Tester for maches True
-     */
-    @Test
-    public void CardTestMatchesTrue()
-    {
-        Card Card1 = new Card("King","Heart",13);
-        Card Card2 = new Card("King","Heart",13);        
-        assertTrue(Card1.matches(Card2));
-    }
-    /**
-     * Tester for maches False
-     */
-    @Test
-    public void CardTestMatchesFalse()
-    {
-        Card Card1 = new Card("King","Heart",13);
-        Card Card3 = new Card("Queen","Club",12);        
-        assertFalse(Card1.matches(Card3));
-    }
-    
 }
