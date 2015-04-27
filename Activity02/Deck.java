@@ -13,8 +13,7 @@ public class Deck {
     /**
      * cards contains all the cards in the deck.
      */
-    private List<Card> cards;
-    private List<Card> cards1;
+    private List<Card> cards; 
 
     /**
      * size is the number of not-yet-dealt cards.
@@ -22,6 +21,9 @@ public class Deck {
      * The next card to be dealt is at size - 1.
      */
     private int size;
+    private int deal;
+    private Card Card1;
+    private Card CDealt;
 
 
     /**
@@ -33,17 +35,12 @@ public class Deck {
      * @param values is an array containing all of the card point values.
      */
     public Deck(String[] ranks, String[] suits, int[] values) {
-        /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-        cards1 = new ArrayList<Card>();
-        cards = new ArrayList<Card>();
+        /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */        
         for(int x = 0; x < ranks.length; x++){
-            cards1.add(ranks[x]);
             for(int y = 0; y < suits.length; y++){
-                cards1.add(suits[y]);
                 for(int z = 0; z <values.length; z++){
-                    cards1.add(values[z]);
-                    cards.add(cards1);
-                    cards1.clear();
+                    Card1 = new Card(ranks[x],suits[y],values[z]);
+                    cards.add(Card1);
                 }
             }
         }
@@ -84,6 +81,9 @@ public class Deck {
      */
     public Card deal() {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+        deal = 0;
+        CDealt = cards.get(deal);        
+        return CDealt;
     }
 
     /**
