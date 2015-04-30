@@ -22,7 +22,6 @@ public class Deck {
      */
     private int size;
     private int deal;
-    private Card Card1;
     private Card CDealt;
 
 
@@ -36,11 +35,11 @@ public class Deck {
      */
     public Deck(String[] ranks, String[] suits, int[] values) {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */        
-        for(int x = 0; x < ranks.length; x++){
-            for(int y = 0; y < suits.length; y++){
-                for(int z = 0; z <values.length; z++){
-                    Card1 = new Card(ranks[x],suits[y],values[z]);
-                    cards.add(Card1);
+        for(int x = 0; x < suits.length; x++){
+            for(int y = 0; y < ranks.length; y++){
+                for(int z = 0; z < values.length; z++){
+                    System.out.println(new Card(ranks[x],suits[y],values[z]));
+                    //cards.add(new Card(ranks[x],suits[y],values[z]));
                 }
             }
         }
