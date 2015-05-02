@@ -35,13 +35,13 @@ public class Deck {
      */
     public Deck(String[] ranks, String[] suits, int[] values) {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */        
-        for(int x = 0; x < suits.length; x++){
-            for(int y = 0; y < ranks.length; y++){
-                for(int z = 0; z < values.length; z++){
-                    System.out.println(new Card(ranks[x],suits[y],values[z]));
+        for(int x = 0; x < values.length; x++){
+//            for(int y = 0; y < ranks.length; y++){
+                for(int z = 0; z < suits.length; z++){
+                    System.out.println(new Card(ranks[x],suits[z],values[x]));
                     //cards.add(new Card(ranks[x],suits[y],values[z]));
                 }
-            }
+//            }
         }
     }
 
