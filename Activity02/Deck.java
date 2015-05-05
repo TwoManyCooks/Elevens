@@ -21,7 +21,6 @@ public class Deck {
      * The next card to be dealt is at size - 1.
      */
     private int size;
-    private int deal;
     private Card CDealt;
 
 
@@ -38,11 +37,12 @@ public class Deck {
         for(int x = 0; x < values.length; x++){
 //            for(int y = 0; y < ranks.length; y++){
                 for(int z = 0; z < suits.length; z++){
-                    System.out.println(new Card(ranks[x],suits[z],values[x]));
-                    //cards.add(new Card(ranks[x],suits[y],values[z]));
+                    //System.out.println(new Card(ranks[x],suits[z],values[x]));
+                    cards.add(new Card(ranks[x],suits[z],values[x]));
                 }
 //            }
         }
+        size = cards.size();
     }
 
 
@@ -52,7 +52,7 @@ public class Deck {
      */
     public boolean isEmpty() {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-        return cards.isEmpty();
+        return size == 0;
     }
 
     /**
@@ -61,7 +61,7 @@ public class Deck {
      */
     public int size() {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-        return cards.size();
+        return size;
     }
 
     /**
@@ -80,8 +80,8 @@ public class Deck {
      */
     public Card deal() {
         /* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-        deal = 0;
-        CDealt = cards.get(deal);        
+        CDealt = cards.get(size);  
+        size --;
         return CDealt;
     }
 

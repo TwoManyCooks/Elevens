@@ -17,8 +17,8 @@ public class DeckTester
 {
     private String[] ranks = {"Ace","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Jack","Queen","King"};
     private String[] suits = {"Spade","Club","Diamond","Heart"};
-    private int[] values = {0,1,2,3,4,5,6,7,8,9,10,11,12};
-    private Deck Deck1 = new Deck(ranks,suits,values);    
+    private int[] values = {0,2,3,4,5,6,7,8,9,10,11,12};
+        
     /**
      * Default constructor for test class DeckTester
      */
@@ -52,6 +52,7 @@ public class DeckTester
     @Test
     public void DeckTestisEmpty()
     {
+        Deck Deck1 = new Deck(ranks,suits,values);
         assertFalse(Deck1.isEmpty());
     }
     /**
@@ -60,7 +61,8 @@ public class DeckTester
     @Test
     public void DeckTestsize()
     {
-        assertEquals(52,Deck1.size(),.1);
+        Deck Deck1 = new Deck(ranks,suits,values);
+        assertEquals(52,Deck1.size(),1);
     }
     /**
      * Test   Method in Deck
@@ -68,7 +70,9 @@ public class DeckTester
     @Test
     public void DeckTestDeal()
     {
+        Deck Deck1 = new Deck(ranks,suits,values);
         Deck1.deal();
-        assertEquals(51,Deck1.size(),.1);
+        assertEquals(51,Deck1.size(),1);
     }
 }
+
