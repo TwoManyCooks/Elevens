@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=TesterForDeck()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ TesterForDeck\r\n
+comment1.params=
+comment1.target=void\ DeckTestisEmpty()
+comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment2.params=
+comment2.target=void\ DeckTestsize()
+comment2.text=\r\n\ Test\ \ \ Method\ in\ Deck\r\n
+comment3.params=
+comment3.target=void\ DeckTestDeal()
+comment3.text=\r\n\ Test\ \ \ Method\ in\ Deck\r\n
+numComments=4
